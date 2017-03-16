@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Trump child Tweets",
+  "description": "Donalds tweets as they were meant to be",
+  "version": "1.1",
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/*",
+    "https://fonts.googleapis.com/*"
+  ],
+  "content_scripts": [
+      {
+          "matches": [
+            //   "http://*/*",
+            //   "https://*/*",
+            "https://twitter.com/realDonaldTrump*"
+          ],
+          "js":[
+            "test.js"
+          ],
+          "run_at": "document_end"
+      }
+  ]
+}
